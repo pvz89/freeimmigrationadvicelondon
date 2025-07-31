@@ -7,129 +7,160 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS styling
+# Custom CSS styling with optimized spacing
 st.markdown("""
 <style>
-    /* Base styles */
+    /* Base styles with reduced padding */
     [data-testid="stAppViewContainer"] {
         background-color: #f8f9fa;
         font-family: 'Arial', sans-serif;
+        padding: 0 !important;
     }
     
-    /* Header styles */
+    /* Header styles with tighter spacing */
     .header {
         background: linear-gradient(135deg, #1a3a6c 0%, #2c5282 100%);
         color: white;
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         text-align: center;
         border-bottom: 5px solid #e9b949;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
     }
     
     .logo {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        margin: 0.5rem 0;
     }
     
-    /* Content card */
+    /* Compact contact bar */
+    .contact-info {
+        background-color: #e9b949;
+        padding: 0.8rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+    
+    /* Content card with optimized spacing */
     .content-card {
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        padding: 2rem;
-        margin: 1.5rem 0;
-        position: relative;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        padding: 1.5rem;
+        margin: 1.2rem 0;
         border-left: 5px solid #1a3a6c;
     }
     
-    /* Consultation cards */
-    .option-card {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        text-align: center;
-        height: 100%;
-        border: 1px solid #eaeaea;
-        transition: transform 0.3s ease;
-    }
-    
-    .option-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    
-    /* Testimonial */
-    .testimonial {
-        background-color: #f0f7ff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        margin: 2rem 0;
-        border: 1px solid #d4e3f7;
-    }
-    
-    /* Footer */
-    .footer {
-        background-color: #1a3a6c;
-        color: white;
-        text-align: center;
-        padding: 2rem;
-        margin-top: 2.5rem;
-        border-top: 5px solid #e9b949;
-    }
-    
-    /* Button */
-    .cta-button {
-        background: linear-gradient(135deg, #1a3a6c 0%, #2c5282 100%);
-        color: white;
-        border: none;
-        padding: 0.8rem 1.5rem;
-        border-radius: 8px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: block;
-        margin: 1.5rem auto 0;
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-        cursor: pointer;
-    }
-    
-    .cta-button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(26, 58, 108, 0.4);
-    }
-    
-    /* Headings */
+    /* Tighter heading spacing */
     h1 {
         color: #1a3a6c;
-        margin-bottom: 1.5rem;
-        font-size: 2.2rem;
+        margin: 0.5rem 0 1rem;
+        font-size: 2rem;
         border-bottom: 3px solid #e9b949;
         padding-bottom: 0.5rem;
     }
     
     h2 {
         color: #2c5282;
-        margin: 1.5rem 0 1rem;
-        font-size: 1.7rem;
+        margin: 1.2rem 0 0.8rem;
+        font-size: 1.6rem;
     }
     
-    /* Highlight box */
+    /* Compact highlight box */
     .highlight-box {
         background-color: #f0f7ff;
-        padding: 1.5rem;
+        padding: 1.2rem;
         border-radius: 8px;
         border-left: 4px solid #2c5282;
+        margin: 1.2rem 0;
+        font-size: 0.95rem;
+    }
+    
+    /* Option cards with reduced padding */
+    .option-card {
+        background: #f8f9fa;
+        padding: 1.2rem;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        text-align: center;
+        border: 1px solid #eaeaea;
+        margin-bottom: 0;
+        height: 100%;
+    }
+    
+    /* Compact testimonial */
+    .testimonial {
+        background-color: #f0f7ff;
+        padding: 1.2rem;
+        border-radius: 8px;
         margin: 1.5rem 0;
+        border: 1px solid #d4e3f7;
+        font-size: 0.95rem;
+    }
+    
+    /* Footer with reduced padding */
+    .footer {
+        background-color: #1a3a6c;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        border-top: 5px solid #e9b949;
+        font-size: 0.9rem;
+    }
+    
+    /* Button styling */
+    .cta-button {
+        background: linear-gradient(135deg, #1a3a6c 0%, #2c5282 100%);
+        color: white;
+        border: none;
+        padding: 0.7rem 1.3rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        display: block;
+        margin: 1.2rem auto 0;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    /* List styling */
+    ul {
+        padding-left: 1.2rem;
+        margin: 0.8rem 0;
+    }
+    
+    li {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Remove extra Streamlit spacing */
+    .stMarkdown, .stWrite {
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
     /* Responsive adjustments */
     @media (max-width: 768px) {
+        .contact-info {
+            gap: 0.8rem;
+            padding: 0.7rem;
+        }
         .content-card {
-            padding: 1.5rem;
+            padding: 1.2rem;
+        }
+        .logo {
+            font-size: 2rem;
+        }
+        .option-card {
+            margin-bottom: 0.8rem;
         }
     }
 </style>
@@ -140,7 +171,7 @@ st.markdown(
     """
     <div class="header">
         <div class="logo">Deluxe Law Chambers</div>
-        <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+        <p style="font-size: 1.1rem; margin: 0.5rem auto; max-width: 800px;">
             Expert Immigration Legal Services with Offices Throughout London
         </p>
     </div>
@@ -148,77 +179,86 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Contact information using Streamlit native components
-st.info("📞 **Free Advice Helpline**: 020 3930 0554  |  📧 **Email**: info@deluxelawchambers.co.uk  |  💻 **Online Booking Available**", icon="ℹ️")
+# Contact information
+st.markdown(
+    """
+    <div class="contact-info">
+        <div>📞 Free Advice: 020 3930 0554</div>
+        <div>📧 info@deluxelawchambers.co.uk</div>
+        <div>💻 Online Booking</div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-# Main content - using Streamlit native components instead of HTML
+# Main content
 with st.container():
     # Title
     st.markdown("<h1>Professional Immigration Legal Support in London</h1>", unsafe_allow_html=True)
     
     # Introduction
-    st.write("For individuals and families navigating the complexities of UK immigration law, professional guidance is essential. London-based legal practices offer specialised support through every stage of the immigration process.")
+    st.write("For individuals and families navigating UK immigration law complexities, professional guidance is essential. London-based legal practices offer specialised support throughout the immigration process.")
     
     # Highlight box
     with st.container():
         st.markdown('<div class="highlight-box">', unsafe_allow_html=True)
-        st.write("**Deluxe Law Chambers** provides comprehensive immigration services from multiple locations across London. Our team of experienced solicitors handles a diverse range of UK visa and immigration matters, offering tailored solutions to meet individual circumstances.")
+        st.write("**Deluxe Law Chambers** provides comprehensive immigration services from multiple London locations. Our experienced solicitors handle diverse UK visa matters with tailored solutions.")
         st.markdown('</div>', unsafe_allow_html=True)
     
     # Expertise section
-    st.markdown("<h2>Expert Guidance Through the Immigration Process</h2>", unsafe_allow_html=True)
-    st.write("Navigating the UK immigration system requires careful attention to detail and thorough understanding of current regulations. Our specialist legal professionals provide critical assistance with:")
+    st.markdown("<h2>Expert Guidance Through Immigration</h2>", unsafe_allow_html=True)
+    st.write("Navigating the UK immigration system requires attention to detail and current regulatory knowledge. Our specialists assist with:")
     
     # Services list
     services = """
     - Visa applications and extensions
     - Work permits and sponsorship
     - Family immigration and settlement
-    - Asylum claims and human rights applications
+    - Asylum and human rights cases
     - Appeals and administrative reviews
     """
     st.markdown(services)
     
-    st.write("The quality of service provided by our London-based immigration specialists is evident through our exceptional client feedback and professional recognition in the field.")
+    st.write("Our London-based specialists' quality is evident through client feedback and professional recognition.")
     
     # Testimonial
     with st.container():
         st.markdown('<div class="testimonial">', unsafe_allow_html=True)
         st.markdown("**★★★★★**")
-        st.write('_"The team at Deluxe Law Chambers provided exceptional guidance throughout my spouse visa application. Their attention to detail and clear communication made a complex process manageable. I couldn\'t have navigated the system without their expertise."_')
-        st.markdown("<p style='text-align: right; font-weight: 600;'>- Sarah K., Client since 2023</p>", unsafe_allow_html=True)
+        st.write('_"Exceptional guidance through my spouse visa application. Their attention to detail made a complex process manageable."_')
+        st.markdown("<p style='text-align: right; font-weight: 600; margin: 0;'>- Sarah K., Client</p>", unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
     
     # Consultation options
     st.markdown("<h2>Flexible Consultation Options</h2>", unsafe_allow_html=True)
-    st.write("Understanding that each client's situation is unique, we offer multiple consultation methods to discuss immigration matters:")
+    st.write("We offer multiple consultation methods to suit different needs:")
     
     # Create columns for consultation options
     col1, col2, col3 = st.columns(3)
     
     with col1:
         st.markdown('<div class="option-card">', unsafe_allow_html=True)
-        st.markdown("**🏢 In-Person Meetings**")
-        st.write("Visit one of our conveniently located offices throughout London for a face-to-face consultation.")
+        st.markdown("**🏢 In-Person**")
+        st.write("Visit our London offices for face-to-face consultations.")
         st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
         st.markdown('<div class="option-card">', unsafe_allow_html=True)
-        st.markdown("**📱 Phone Consultations**")
-        st.write("Discuss your case with a specialist solicitor over the phone at a time that suits you.")
+        st.markdown("**📱 Phone**")
+        st.write("Discuss your case with a specialist solicitor by phone.")
         st.markdown('</div>', unsafe_allow_html=True)
     
     with col3:
         st.markdown('<div class="option-card">', unsafe_allow_html=True)
-        st.markdown("**💻 Virtual Meetings**")
-        st.write("Connect via Zoom, Microsoft Teams, or WhatsApp for secure online consultations.")
+        st.markdown("**💻 Virtual**")
+        st.write("Secure online consultations via Zoom, Teams, or WhatsApp.")
         st.markdown('</div>', unsafe_allow_html=True)
     
     # CTA Button
     st.markdown(
         """
         <a href="https://deluxelawchambers.co.uk/immigration-solicitors-in-london/" target="_blank">
-            <button class="cta-button">Schedule Your Consultation Today</button>
+            <button class="cta-button">Schedule Consultation</button>
         </a>
         """,
         unsafe_allow_html=True
@@ -226,30 +266,29 @@ with st.container():
     
     # Legal advice section
     st.markdown("<h2>Introductory Legal Advice</h2>", unsafe_allow_html=True)
-    st.write("For those beginning their immigration journey, we offer preliminary guidance to help understand options and requirements. This initial discussion provides clarity on:")
+    st.write("For those beginning their immigration journey, we offer preliminary guidance on:")
     
     # Advice list
     advice = """
-    - Eligibility for different visa categories
-    - Documentation requirements and timelines
-    - Potential challenges and solutions
-    - Pathways to settlement and citizenship
+    - Visa category eligibility
+    - Documentation requirements
+    - Potential challenges
+    - Settlement pathways
     """
     st.markdown(advice)
     
     # Backlink section
-    st.write("When facing the complexities of UK immigration law, consulting with experienced " +
+    st.write("When facing UK immigration complexities, consulting experienced " +
              "[immigration solicitors in London](https://deluxelawchambers.co.uk/immigration-solicitors-in-london/) " +
-             "ensures proper handling of your case with professional expertise.")
+             "ensures professional case handling.")
     
-    st.write("Our London-based immigration law specialists continue to support clients through changing regulations, providing clarity and confidence throughout the application process.")
+    st.write("Our specialists support clients through regulatory changes, providing clarity throughout the application process.")
 
 # Footer
 st.markdown(
     """
     <div class="footer">
         <p>© 2023 Deluxe Law Chambers | Immigration Legal Specialists | London, UK</p>
-        <p>Professional legal services for all UK visa and immigration matters</p>
     </div>
     """,
     unsafe_allow_html=True
