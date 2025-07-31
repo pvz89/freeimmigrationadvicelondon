@@ -199,11 +199,7 @@ with st.container():
     # Introduction
     st.write("For individuals and families navigating UK immigration law complexities, professional guidance is essential. London-based legal practices offer specialised support throughout the immigration process.")
     
-    # Highlight box
-    with st.container():
-        st.markdown('<div class="highlight-box">', unsafe_allow_html=True)
-        st.write("**Deluxe Law Chambers** provides comprehensive immigration services from multiple London locations. Our experienced solicitors handle diverse UK visa matters with tailored solutions.")
-        st.markdown('</div>', unsafe_allow_html=True)
+   
     
     # Expertise section
     st.markdown("<h2>Expert Guidance Through Immigration</h2>", unsafe_allow_html=True)
