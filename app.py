@@ -4,37 +4,25 @@ import streamlit as st
 st.set_page_config(
     page_title="Immigration Solicitors in London | Deluxe Law Chambers",
     page_icon="⚖️",
-    layout="centered",
-    initial_sidebar_state="collapsed"
+    layout="centered"
 )
 
 # Custom CSS styling
 st.markdown("""
 <style>
     /* Base styles */
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
+    [data-testid="stAppViewContainer"] {
         background-color: #f8f9fa;
-    }
-    
-    /* Main container */
-    .main-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 1rem;
+        font-family: 'Arial', sans-serif;
     }
     
     /* Header styles */
     .header {
         background: linear-gradient(135deg, #1a3a6c 0%, #2c5282 100%);
         color: white;
-        padding: 2.5rem 1rem;
+        padding: 3rem 1rem;
         text-align: center;
         border-bottom: 5px solid #e9b949;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-radius: 0 0 10px 10px;
         margin-bottom: 1.5rem;
     }
     
@@ -42,7 +30,6 @@ st.markdown("""
         font-size: 2.8rem;
         font-weight: 700;
         margin-bottom: 0.5rem;
-        letter-spacing: 0.5px;
     }
     
     .tagline {
@@ -55,7 +42,7 @@ st.markdown("""
     /* Contact bar */
     .contact-bar {
         background-color: #e9b949;
-        padding: 0.8rem;
+        padding: 1rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -71,7 +58,7 @@ st.markdown("""
         background-color: white;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        padding: 2.5rem;
+        padding: 2rem;
         margin: 1.5rem 0;
         position: relative;
         border-left: 5px solid #1a3a6c;
@@ -88,7 +75,7 @@ st.markdown("""
     
     h2 {
         color: #2c5282;
-        margin: 2rem 0 1rem;
+        margin: 1.5rem 0 1rem;
         font-size: 1.7rem;
     }
     
@@ -108,9 +95,9 @@ st.markdown("""
         border-radius: 8px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         text-align: center;
-        transition: all 0.3s ease;
         height: 100%;
         border: 1px solid #eaeaea;
+        transition: transform 0.3s ease;
     }
     
     .option-card:hover {
@@ -127,10 +114,9 @@ st.markdown("""
     /* Testimonial */
     .testimonial {
         background-color: #f0f7ff;
-        padding: 1.8rem;
+        padding: 1.5rem;
         border-radius: 8px;
         margin: 2rem 0;
-        position: relative;
         border: 1px solid #d4e3f7;
     }
     
@@ -148,11 +134,10 @@ st.markdown("""
         padding: 2rem;
         margin-top: 2.5rem;
         border-top: 5px solid #e9b949;
-        border-radius: 10px 10px 0 0;
     }
     
     /* Button */
-    .stButton>button {
+    .cta-button {
         background: linear-gradient(135deg, #1a3a6c 0%, #2c5282 100%);
         color: white;
         border: none;
@@ -165,9 +150,11 @@ st.markdown("""
         margin: 1.5rem auto 0;
         width: 100%;
         max-width: 300px;
+        text-align: center;
+        cursor: pointer;
     }
     
-    .stButton>button:hover {
+    .cta-button:hover {
         transform: scale(1.05);
         box-shadow: 0 5px 15px rgba(26, 58, 108, 0.4);
     }
@@ -206,157 +193,154 @@ st.markdown(
 st.markdown(
     """
     <div class="contact-bar">
-        <div class="contact-item">📞 Free Advice Helpline: 020 3930 0554</div>
-        <div class="contact-item">📧 Email: info@deluxelawchambers.co.uk</div>
-        <div class="contact-item">💻 Online Booking Available</div>
+        <div>📞 Free Advice Helpline: 020 3930 0554</div>
+        <div>📧 Email: info@deluxelawchambers.co.uk</div>
+        <div>💻 Online Booking Available</div>
     </div>
     """,
     unsafe_allow_html=True
 )
 
 # Main content container
-with st.container():
+st.markdown(
+    """
+    <div class="content-card">
+        <h1>Professional Immigration Legal Support in London</h1>
+        <p>For individuals and families navigating the complexities of UK immigration law, professional guidance is essential. London-based legal practices offer specialised support through every stage of the immigration process.</p>
+        
+        <div class="highlight-box">
+            <p><strong>Deluxe Law Chambers</strong> provides comprehensive immigration services from multiple locations across London. Our team of experienced solicitors handles a diverse range of UK visa and immigration matters, offering tailored solutions to meet individual circumstances.</p>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Expertise section
+st.markdown(
+    """
+    <div class="content-card">
+        <h2>Expert Guidance Through the Immigration Process</h2>
+        <p>Navigating the UK immigration system requires careful attention to detail and thorough understanding of current regulations. Our specialist legal professionals provide critical assistance with:</p>
+        
+        <ul>
+            <li>Visa applications and extensions</li>
+            <li>Work permits and sponsorship</li>
+            <li>Family immigration and settlement</li>
+            <li>Asylum claims and human rights applications</li>
+            <li>Appeals and administrative reviews</li>
+        </ul>
+        
+        <p>The quality of service provided by our London-based immigration specialists is evident through our exceptional client feedback and professional recognition in the field.</p>
+        
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p><em>"The team at Deluxe Law Chambers provided exceptional guidance throughout my spouse visa application. Their attention to detail and clear communication made a complex process manageable. I couldn't have navigated the system without their expertise."</em></p>
+            <p style="text-align: right; font-weight: 600;">- Sarah K., Client since 2023</p>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Consultation options
+st.markdown(
+    """
+    <div class="content-card">
+        <h2>Flexible Consultation Options</h2>
+        <p>Understanding that each client's situation is unique, we offer multiple consultation methods to discuss immigration matters:</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Create columns for consultation options
+col1, col2, col3 = st.columns(3)
+
+with col1:
     st.markdown(
         """
-        <div class="content-card">
-            <h1>Professional Immigration Legal Support in London</h1>
-            
-            <p>For individuals and families navigating the complexities of UK immigration law, professional guidance is essential. London-based legal practices offer specialised support through every stage of the immigration process.</p>
-            
-            <div class="highlight-box">
-                <p><b>Deluxe Law Chambers</b> provides comprehensive immigration services from multiple locations across London. Our team of experienced solicitors handles a diverse range of UK visa and immigration matters, offering tailored solutions to meet individual circumstances.</p>
-            </div>
+        <div class="option-card">
+            <div class="icon">🏢</div>
+            <h3>In-Person Meetings</h3>
+            <p>Visit one of our conveniently located offices throughout London for a face-to-face consultation.</p>
         </div>
         """,
         unsafe_allow_html=True
     )
-    
+
+with col2:
     st.markdown(
         """
-        <div class="content-card">
-            <h2>Expert Guidance Through the Immigration Process</h2>
-            
-            <p>Navigating the UK immigration system requires careful attention to detail and thorough understanding of current regulations. Our specialist legal professionals provide critical assistance with:</p>
-            
-            <ul>
-                <li>Visa applications and extensions</li>
-                <li>Work permits and sponsorship</li>
-                <li>Family immigration and settlement</li>
-                <li>Asylum claims and human rights applications</li>
-                <li>Appeals and administrative reviews</li>
-            </ul>
-            
-            <p>The quality of service provided by our London-based immigration specialists is evident through our exceptional client feedback and professional recognition in the field.</p>
-            
-            <div class="testimonial">
-                <div class="stars">★★★★★</div>
-                <p><i>"The team at Deluxe Law Chambers provided exceptional guidance throughout my spouse visa application. Their attention to detail and clear communication made a complex process manageable. I couldn't have navigated the system without their expertise."</i></p>
-                <p style="text-align: right; font-weight: 600;">- Sarah K., Client since 2023</p>
-            </div>
+        <div class="option-card">
+            <div class="icon">📱</div>
+            <h3>Phone Consultations</h3>
+            <p>Discuss your case with a specialist solicitor over the phone at a time that suits you.</p>
         </div>
         """,
         unsafe_allow_html=True
     )
-    
+
+with col3:
     st.markdown(
         """
-        <div class="content-card">
-            <h2>Flexible Consultation Options</h2>
-            
-            <p>Understanding that each client's situation is unique, we offer multiple consultation methods to discuss immigration matters:</p>
+        <div class="option-card">
+            <div class="icon">💻</div>
+            <h3>Virtual Meetings</h3>
+            <p>Connect via Zoom, Microsoft Teams, or WhatsApp for secure online consultations.</p>
         </div>
         """,
         unsafe_allow_html=True
     )
-    
-    # Consultation options in columns
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown(
-            """
-            <div class="option-card">
-                <div class="icon">🏢</div>
-                <h3>In-Person Meetings</h3>
-                <p>Visit one of our conveniently located offices throughout London for a face-to-face consultation.</p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    
-    with col2:
-        st.markdown(
-            """
-            <div class="option-card">
-                <div class="icon">📱</div>
-                <h3>Phone Consultations</h3>
-                <p>Discuss your case with a specialist solicitor over the phone at a time that suits you.</p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    
-    with col3:
-        st.markdown(
-            """
-            <div class="option-card">
-                <div class="icon">💻</div>
-                <h3>Virtual Meetings</h3>
-                <p>Connect via Zoom, Microsoft Teams, or WhatsApp for secure online consultations.</p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    
-    # CTA button
-    st.markdown(
-        """
-        <div style="text-align: center; margin: 1.5rem 0;">
-            <a href="https://deluxelawchambers.co.uk/immigration-solicitors-in-london/" style="text-decoration: none;">
-                <button style="background: linear-gradient(135deg, #1a3a6c 0%, #2c5282 100%); 
-                            color: white; 
-                            border: none; 
-                            padding: 1rem 2rem; 
-                            border-radius: 8px; 
-                            font-size: 1.1rem; 
-                            font-weight: 600; 
-                            cursor: pointer;
-                            transition: all 0.3s ease;">
-                    Schedule Your Consultation Today
-                </button>
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    # Bottom content section
-    st.markdown(
-        """
-        <div class="content-card">
-            <h2>Introductory Legal Advice</h2>
-            
-            <p>For those beginning their immigration journey, we offer preliminary guidance to help understand options and requirements. This initial discussion provides clarity on:</p>
-            
-            <ul>
-                <li>Eligibility for different visa categories</li>
-                <li>Documentation requirements and timelines</li>
-                <li>Potential challenges and solutions</li>
-                <li>Pathways to settlement and citizenship</li>
-            </ul>
-            
-            <p>When facing the complexities of UK immigration law, consulting with experienced 
-                <a href="https://deluxelawchambers.co.uk/immigration-solicitors-in-london/" 
-                style="color: #1a3a6c; font-weight: 600; text-decoration: none; border-bottom: 2px solid #e9b949;">
-                immigration solicitors in London</a> 
-                ensures proper handling of your case with professional expertise.</p>
-            
-            <p>Our London-based immigration law specialists continue to support clients through changing regulations, providing clarity and confidence throughout the application process.</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    
+
+# CTA Button
+st.markdown(
+    """
+    <a href="https://deluxelawchambers.co.uk/immigration-solicitors-in-london/" target="_blank">
+        <button class="cta-button">Schedule Your Consultation Today</button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+
+# Legal advice section
+st.markdown(
+    """
+    <div class="content-card">
+        <h2>Introductory Legal Advice</h2>
+        <p>For those beginning their immigration journey, we offer preliminary guidance to help understand options and requirements. This initial discussion provides clarity on:</p>
+        
+        <ul>
+            <li>Eligibility for different visa categories</li>
+            <li>Documentation requirements and timelines</li>
+            <li>Potential challenges and solutions</li>
+            <li>Pathways to settlement and citizenship</li>
+        </ul>
+        
+        <p>When facing the complexities of UK immigration law, consulting with experienced 
+            <a href="https://deluxelawchambers.co.uk/immigration-solicitors-in-london/" 
+            style="color: #1a3a6c; font-weight: 600; text-decoration: none; border-bottom: 2px solid #e9b949;">
+            immigration solicitors in London</a> 
+            ensures proper handling of your case with professional expertise.</p>
+        
+        <p>Our London-based immigration law specialists continue to support clients through changing regulations, providing clarity and confidence throughout the application process.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Contact form
+with st.expander("📩 Send Us a Message", expanded=True):
+    with st.form("contact_form"):
+        name = st.text_input("Full Name")
+        email = st.text_input("Email Address")
+        phone = st.text_input("Phone Number")
+        message = st.text_area("Your Message")
+        submitted = st.form_submit_button("Submit")
+        
+        if submitted:
+            st.success("Thank you for your message! We'll contact you shortly.")
+
 # Footer
 st.markdown(
     """
@@ -367,15 +351,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Add a contact form
-with st.expander("📩 Send Us a Message", expanded=False):
-    with st.form("contact_form"):
-        name = st.text_input("Full Name")
-        email = st.text_input("Email Address")
-        phone = st.text_input("Phone Number")
-        message = st.text_area("Your Message")
-        submitted = st.form_submit_button("Submit")
-        
-        if submitted:
-            st.success("Thank you for your message! We'll contact you shortly.")
