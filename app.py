@@ -217,13 +217,7 @@ with st.container():
     
     st.write("Our London-based specialists' quality is evident through client feedback and professional recognition.")
     
-    # Testimonial
-    with st.container():
-        st.markdown('<div class="testimonial">', unsafe_allow_html=True)
-        st.markdown("**★★★★★**")
-        st.write('_"Exceptional guidance through my spouse visa application. Their attention to detail made a complex process manageable."_')
-        st.markdown("<p style='text-align: right; font-weight: 600; margin: 0;'>- Sarah K., Client</p>", unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+
     
     # Consultation options
     st.markdown("<h2>Flexible Consultation Options</h2>", unsafe_allow_html=True)
