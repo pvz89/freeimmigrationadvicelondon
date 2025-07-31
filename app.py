@@ -226,23 +226,7 @@ with st.container():
     # Create columns for consultation options
     col1, col2, col3 = st.columns(3)
     
-    with col1:
-        st.markdown('<div class="option-card">', unsafe_allow_html=True)
-        st.markdown("**🏢 In-Person**")
-        st.write("Visit our London offices for face-to-face consultations.")
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown('<div class="option-card">', unsafe_allow_html=True)
-        st.markdown("**📱 Phone**")
-        st.write("Discuss your case with a specialist solicitor by phone.")
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col3:
-        st.markdown('<div class="option-card">', unsafe_allow_html=True)
-        st.markdown("**💻 Virtual**")
-        st.write("Secure online consultations via Zoom, Teams, or WhatsApp.")
-        st.markdown('</div>', unsafe_allow_html=True)
+   
     
     # CTA Button
     st.markdown(
